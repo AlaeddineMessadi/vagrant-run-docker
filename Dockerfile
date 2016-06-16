@@ -27,8 +27,9 @@ RUN apt-get -qq update && \
     rm -rf /var/lib/apt/lists/*
 
 # Add Vagrant key
+# generate and copy your public key rsa into /keys
 RUN mkdir -p /root/.ssh
-ADD keys/vagrant.pub /root/.ssh/authorized_keys
+ADD keys/id_rsa.pub /root/.ssh/authorized_keys
 
 
 # Cleanups
