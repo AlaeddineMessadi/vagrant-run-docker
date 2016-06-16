@@ -16,5 +16,4 @@ Vagrant.configure(2) do |config|
      # Long running containers
      docker.remains_running = true
   end
-
 end
