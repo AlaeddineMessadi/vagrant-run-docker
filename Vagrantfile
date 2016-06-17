@@ -12,9 +12,10 @@ Vagrant.configure(2) do |config|
 
      # Use vagrant docker images SSH
      docker.has_ssh = true
-     # Generate and copy your private key into /keys
-     config.ssh.private_key_path = 'keys/id_rsa'
-     config.ssh.forward_agent = true
+     # Generate and copy your private key into /keys if you want to use your
+     # own keys. don't forget to check the correct private_key_path
+     #config.ssh.private_key_path = 'keys/id_rsa'
+     #config.ssh.forward_agent = true
 
      # Long running containers
      docker.remains_running = true
