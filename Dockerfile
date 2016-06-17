@@ -7,7 +7,6 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV TERM linux
 
 # common baseimage actions
-RUN ls /etc
 RUN echo "/root" > /etc/container_environment/HOME && \
     echo "noninteractive" > /etc/container_environment/DEBIAN_FRONTEND && \
     echo "linux" > /etc/container_environment/TERM && \
@@ -32,7 +31,7 @@ RUN mkdir -p /root/.ssh && \
     curl -sL https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub > /root/.ssh/authorized_keys
 
 # to use your private keys generate and copy your public key rsa into /keys
-# Comment the previous line 'curl ...' , uncomment the line above and check the valide key name
+# Comment the previous line 'curl ...' , uncomment the line above and check the valide key 
 # ADD keys/id_rsa.pub /root/.ssh/authorized_keys
 
 # Cleanups
