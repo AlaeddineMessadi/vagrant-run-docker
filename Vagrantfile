@@ -20,7 +20,7 @@ Vagrant.configure(2) do |config|
      # Long running containers
      docker.remains_running = true
 
-     docker.ports = ["8080:80"]
+     docker.ports = ["80:80"]
      config.vm.synced_folder "www/blogtic", "/var/www/html/blogtic", create: true
   end
 end
