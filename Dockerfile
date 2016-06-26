@@ -34,7 +34,8 @@ RUN apt-get update && \
     nano git curl \
     nginx \
     supervisor \
-    php7.0-fpm  && \
+    php7.0-fpm  \
+    mysql-server mysql-client && \
     apt-get autoclean && apt-get -y autoremove
 RUN rm -rf /tmp/* /var/tmp/*
 
