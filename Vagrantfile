@@ -21,6 +21,6 @@ Vagrant.configure(2) do |config|
      docker.remains_running = true
 
      docker.ports = ["8080:80"]
-     config.vm.synced_folder "www/blogtic", "/var/www/blogtic", create: true
+     config.vm.synced_folder "www/blogtic", "/var/www/html/blogtic", create: true
   end
 end
